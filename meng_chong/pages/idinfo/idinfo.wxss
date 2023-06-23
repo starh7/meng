@@ -1,0 +1,220 @@
+/* pages/idinfo/idinfo.wxss */
+/* 背景图片 */
+/* id信息 */
+page{
+    background-color: #cbc6a9;
+    font-size: 16px;
+}
+.indextop{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 750rpx;
+    z-index: 9999;
+  }
+  .navstyl{
+    background: #ffffff;
+    transition: all 1.5s;
+  }
+  .unnavstyl{
+    transition: all 1.5s;
+  }
+  .xiangqi{
+    transition: all 1.5s;
+    opacity: 1;
+    text-align: center;
+    flex: 1;
+  }
+  .unxiangqi{
+    transition: all 1.5s;
+    opacity: 0;
+    text-align: center;
+    flex: 1;
+  }
+ 
+
+.backgroundImg{
+  background-color: #fff
+}
+.bgc{
+    width: 100%;
+}
+.idcard{
+    position: relative;
+    margin-top: -60px;
+    height: 200px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    box-shadow:  0 7px 5px -5px #333;
+}
+
+.idcard image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.idcard .up{
+    display: flex;
+    position: absolute;
+    top: -30px;
+    left: 30px
+
+}
+.idcard .up .right{
+    margin-left: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+.idcard .up .right .day{
+    margin-bottom: 20px;
+    color: #fff
+}
+.idcard .up .right .name{
+    margin-bottom: 10px;
+}
+.idcard .up .right .name .iconfont{
+    margin-left: 15px;
+}
+.idcard .up .right .icon text{
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+.idcard .up .right .icon .iconfont{
+    background-color: #fff;
+    font-size: 20px;
+    margin-left: 70px;
+}
+.idcard .detail{
+    padding-top: 100px;
+    padding-left: 30px;
+}
+.idcard .detail .day text:nth-child(2){
+    background-color: #fdee5f;
+    padding: 2px 5px;
+    margin-left: 10px;
+    border-radius: 10px 10px 10px 0;
+}
+.idcard .detail .birthday{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+
+}
+.idcard .detail .birthday view{
+    color: #333;
+    margin-right: 10px;
+}
+.idcard .detail .birthday view text{
+    color: #000;
+}
+.idcard .detail .eye{
+    color: #ccc;
+}
+/* 我的记录 */
+.record{
+    margin-top: 50px;
+    overflow: hidden;
+}
+.record .title{
+    display: block;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+/* 宠物记录 */
+.record .petRecord{
+    display: grid;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    grid-row-gap: 10px;
+    margin: 0 10px;
+}
+.record .petRecord .first{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 9px;
+    /* flex-wrap: wrap; */
+}
+/* 单独的全部记录方块 */
+/* 大方块 */
+/* .record .petRecord .big{
+    margin: 0 10px;
+} */
+.record .all,.item,.big{
+    height: 78px;
+    background-color: #9bd9db;
+    border-radius: 10px;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+}
+.record .big .show{
+    display: flex;
+    align-items: center;
+}
+.record .big .show text:nth-child(1){
+    font-size: 11px;
+    margin-right: 5px;
+}
+/* 大方块 */
+
+
+/* 四个小方块 */
+.petRecord .second{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 9px;
+}
+
+/* 四个大方块 */
+.petRecord .third{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 9px;
+    grid-row-gap: 10px
+}
+
+.iconfont{
+    font-size: 14px;
+}
+/* .record .item{
+    display: flex;
+    width: 78px;
+    margin-right: 10px;
+}
+.record .big,.item{
+    display: flex;
+    flex-direction: column;
+}
+.record .head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+} */
+/* 四个小的 */
+/* .record .four{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+.record .four .item:nth-child(1){
+    margin-left: 5px;
+    
+} */
+/* 俩个的 */
+/* .record .two{
+    display: flex;
+    margin-bottom: 10px;
+}
+.record .two .big{
+    margin-left: 15px;
+} */

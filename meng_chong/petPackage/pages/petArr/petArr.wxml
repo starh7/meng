@@ -1,0 +1,15 @@
+<!--petPackage/pages/petArr/petArr.wxml-->
+<view class="container">
+    <picker mode="date" value="{{arriveDate}}" start="2017-09-01" end="2023-09-01" bindchange="bindDateChange">
+        <view class="content">
+            <text>{{arriveDate?arriveDate:"请选择宠物到家日期"}}</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </view>
+    </picker>
+
+    <button disabled="{{!arriveDate}}" class="{{arriveDate?'active':''}}" bind:tap="handleNext" data-pet="{{pet}}">
+        下一步
+    </button>
+
+    <text class="jumpit" bind:tap="handleNext">跳过 (暂不确定)</text>
+</view>

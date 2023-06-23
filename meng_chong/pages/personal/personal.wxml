@@ -1,0 +1,83 @@
+<!-- pages/personal/personal.wxml -->
+<view class="container">
+    <!-- 头像 -->
+    <view class="con header" wx:if="{{!hasUserInfo}}">
+        <image src="/static/images/index/mao.jpg" />
+        <view class="content">
+            <view class="name" bindtap="getUserInfo">
+                <text>点击获取头像</text>
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text class="main">铲屎官主页 > </text>
+        </view>
+    </view>
+
+    <view class="con header" wx:else>
+        <image src="{{userInfo.avatarUrl}}" />
+        <view class="content">
+            <view class="name" bindtap="getUserInfo">
+                <text>{{userInfo.nickName}}</text>
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text class="main">铲屎官主页 > </text>
+        </view>
+    </view>
+    <!-- 标记 -->
+    <view class="note">
+        <view class="item" wx:for="{{allIn}}" wx:for-item="item">
+            <text>{{item.num}}</text>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    <!-- 小导航 -->
+    <view class="con nav">
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-jiaju"></text>
+            <text>家庭</text>
+        </view>
+    </view>
+    <!-- 最新活动 -->
+    <view class="con newAction">
+        <text class="title">最新活动</text>
+        <view class="item">
+            <image src="/static/images/index/mao.jpg" />
+        </view>
+        <view class="item">
+            <image src="/static/images/index/mao.jpg" />
+        </view>
+        <view class="item">
+            <image src="/static/images/index/mao.jpg" />
+        </view>
+        <view class="item">
+            <image src="/static/images/index/mao.jpg" />
+        </view>
+    </view>
+</view>

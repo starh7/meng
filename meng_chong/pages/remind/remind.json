@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottomdialog":"/components/bottomdialog/bottomdialog"
+  },
+  "navigationBarTitleText": "添加提醒"
+}

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/remindList/remindList",
+    "pages/remind/remind",
+    "pages/editor/editor",
+    "pages/myPet/myPet",
+    "pages/breed/breed",
+    "pages/idinfo/idinfo",
+    "pages/personal/personal",
+    "pages/search/search",
+    "pages/hospital/hospital",
+    "pages/knowledgeDetail/knowledgeDetail",
+    "pages/searchList/searchList",
+    "pages/recordShare/recordShare",
+    "pages/petEdit/petEdit",
+    "pages/comment/comment",
+    "pages/record/record"
+    
+  ],
+  "subpackages": [
+    {
+      "root": "petPackage",
+      "pages": [
+        "pages/petName/petName",
+        "pages/petType/petType",
+        "pages/petBreed/petBreed",
+        "pages/petGendeer/petGendeer",
+        "pages/petSterilization/petSterilization",
+        "pages/petBirth/petBirth",
+        "pages/petArr/petArr",
+        "pages/petWeight/petWeight"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fee258",
+    "navigationBarTitleText": "记录",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "selectedColor": "#33a3dc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "记录",
+        "iconPath": "/static/images/tabs/tab-cate.png",
+        "selectedIconPath": "/static/images/tabs/tab-cate.png"
+      },
+      {
+        "pagePath": "pages/hospital/hospital",
+        "text": "育宠",
+        "iconPath": "/static/images/tabs/tab-home.png",
+        "selectedIconPath": "/static/images/tabs/tab-home.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "TA的",
+        "iconPath": "/static/images/tabs/tab-my.png",
+        "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+<view class="container">
+    <!-- pages/search/search.wxml -->
+    <!-- 搜索框 -->
+    <view class="con search_ipt">
+        <view class="ipt">
+            <view class="left">
+                <text class="iconfont icon-sousuo2"></text>
+                <input placeholder="驱虫" bindinput="handelSearch" value="{{searchVal}}"/>
+            </view>
+            <text class="clear" wx:if="{{searchVal}}" bindtap="handleClear">×</text>
+        </view>
+        <text class="search_btn" bindtap="goDetail">搜索</text>
+    </view>
+    <!-- 热门搜索 -->
+    <view class="con hot_search">
+        <text>热门搜索</text>
+        <view class="container">
+            <text bindtap="handleTap" wx:for="{{hotList}}" wx:for-item="item" wx:key="id" data-name="{{item.name}}">{{item.name}}</text>
+        </view>
+    </view>
+    <!-- 历史记录 -->
+    <view class="con history" wx:if="{{historySearch.length!=0}}">
+        <view class="clear" bindtap="handleClearAll">
+            <text>历史记录</text>
+            <text class="iconfont icon-sousuo2" >清除</text>
+        </view>
+        <view class="container">
+            <text wx:for="{{historySearch}}" wx:for-item="item">{{item}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+/* pages/knowledgeDetail/knowledgeDetail.wxss */
+.container{
+    margin: 20rpx 30rpx;
+}
+.title{
+    font-size: 35rpx;
+    font-weight: bold;
+}
+.con-body{
+    margin: 20rpx 0;
+}
+.con-body image{
+    margin: 30rpx 0;
+    width: 100%;
+}
+.con-body .unshow{
+    display: none;
+}
+.con-body .small{
+    display: block;
+    margin: 20rpx 0;
+    font-size: 30rpx;
+    font-weight: bold;
+    
+}

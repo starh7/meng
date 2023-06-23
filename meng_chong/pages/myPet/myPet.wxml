@@ -1,0 +1,21 @@
+<!-- pages/myPet/myPet.wxml -->
+<view class="container">
+    <view class="item" wx:for="{{pet}}" wx:for-item="item" wx:key="id">
+        <view class="left">
+            <image src="http://localhost:8080/images/pet/{{item.photo}}" />
+            <view class="info">
+                <text>{{item.name}}</text>
+                <text>{{item.breed}}</text>
+            </view>
+        </view>
+        <view class="right">
+            <text class="iconfont icon-dayuhao" bind:tap="goIdInfo" data-id="{{item.id}}"></text>
+            <text class="" bindtap="showModal" data-id="{{item.id}}">...</text>
+        </view>
+
+
+    </view>
+    <view class="add">
+        <button bindtap="addPet">添加宠物</button>
+    </view>
+</view>

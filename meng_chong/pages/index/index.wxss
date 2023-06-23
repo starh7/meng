@@ -1,0 +1,260 @@
+/**index.wxss**/
+
+page{
+/* background: -webkit-linear-gradient(top ,#fee258 0%,#f4f5ed 20%, #f4f5ed 100%); */
+font-size: 18px;
+/* background-image: linear-gradient(180deg,#37BEA4,#FFFFFF); */
+/* background-repeat: no-repeat; */
+}
+.container{
+  background: -webkit-linear-gradient(top ,#fee258 0%,#f4f5ed 20%, #f4f5ed 100%); 
+background-repeat: no-repeat;
+}
+/* 标签栏部分 */
+.con{
+  margin: 0 15px;
+}
+.title{
+  text-align: center;
+  
+  margin-bottom: 20px;
+}
+.title text{
+  margin-right: 50px;
+}
+.title .current{
+  font-weight: 700;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #000;
+}
+/*使用者  */
+.userName{
+  display: flex;
+  align-items: center;
+}
+.userName .family{
+  margin-right: 10px;
+}
+.userName .current{
+  font-size: 20px;
+  font-weight: bold;
+}
+.userName .name{
+  margin-right: 10px;
+}
+.userName .iconfont{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* 宠物信息详情 */
+.petScroll {
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 有家庭时显示 */
+.petScroll .families{
+  /* margin-top: 20px; */
+  height: 170px;
+  /* background-color: red; */
+  display: inline-block;
+  width: 343px;
+  margin-top: 20px;
+  padding-top: 80px;
+}
+.userDetail{
+  margin-top: 20px;
+  /* height: 150px; */
+  width: 343px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  vertical-align:top;
+}
+.petItem{
+  margin-top: 20px;
+}
+.userDetail image{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.userDetail .up{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+}
+.userDetail .up .info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userDetail .up .info .name{
+  font-size: 20px;
+}
+.userDetail .up .info .detail{
+  margin-top: 10px;
+  font-size: 15px;
+  color: #7e7f77;
+}
+.userDetail .up .info .detail text{
+  margin-right: 10px;
+}
+.userDetail .up .iconfont{
+  font-size: 20px;
+  color: #7e7f77;
+  margin-left: 30px;
+}
+.userDetail .down{
+  margin-top: 15px;
+  /* margin-bottom: 15px; */
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 10px;
+  background-color: #f7f5e3;
+  border-radius: 0 20px 20px 20px;
+  font-size: 15px;
+}
+
+
+/* 重要事项提醒 */
+.notion{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.notion image{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.notion .middle{
+  width: 120px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+.notion .middle text:nth-child(2){
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.notion .right{
+  font-size: 15px;
+  margin-left: 20px;
+  text-align: center;
+  padding: 7px 10px;
+  border-radius: 15px;
+  background-color: #fee258;
+}
+/* 事件记录展示 */
+
+.showScroll .scrollItem{
+  margin-bottom: 30px;
+}
+.showScroll .scrollItem .year{
+  font-weight: 700;
+  
+}
+.showScroll .scrollItem .date{
+  display: flex;
+  align-items: center;
+}
+.showScroll .scrollItem .date text{
+  font-weight: 700;
+  
+}
+.showScroll .scrollItem .date text:nth-child(2){
+  font-weight: bold;
+  font-size: 12px;
+  color: #43423e;
+}
+.showScroll .scrollItem .date .tip{
+  display: flex;
+  align-items: center;
+  background-color: #fff1b5;
+  border-radius: 20px 20px 20px 0 ;
+  margin-left: 15px;
+  padding: 3px 10px;
+  font-size: 10px;
+  border: 1px solid #000;
+}
+.showScroll .scrollItem .date .tip text{
+  font-size: 12px;
+}
+.showScroll .scrollItem .date .tip .iconfont{
+  margin-right: 5px;
+}
+.showScroll .scrollItem .detail{
+  margin-top: 15px;
+  /* height: 150px; */
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 12px;
+}
+.showScroll .scrollItem .detail .publisher{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.showScroll .scrollItem .detail .publisher image{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* 图片 */
+.showScroll .scrollItem .detail .photo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.showScroll .scrollItem .detail .photo image,video{
+  width: 70%;
+  border-radius: 10%;
+  padding-right: 7px;
+
+}
+.showScroll .scrollItem .detail .photo .size2{
+  width: 50%;
+  height: 100%;
+}
+.showScroll .scrollItem .detail .photo .size3{
+  width: 33%;
+  height: auto;
+}
+.showScroll .scrollItem .detail .icon{
+  display: flex;
+  justify-content: flex-end;
+}
+.showScroll .scrollItem .detail .icon .comment text{
+  margin-right: 15px;
+}
+.showScroll .scrollItem .detail .icon .like text{
+  margin-right: 15px;
+}
+/* 编辑小加 号 */
+.editor{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fee600;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  right: 20px;
+  top: 450px;
+}
+

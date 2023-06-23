@@ -1,0 +1,20 @@
+<!-- pages/breed/breed.wxml -->
+<view class="container">
+    <!-- 搜索框 -->
+    <view class="search_ipt">
+        <view class="ipt">
+            <view class="left">
+                <text class="iconfont icon-sousuo2"></text>
+                <input placeholder="点击搜索品种" bindinput="handelSearch" value="{{searchVal}}" />
+            </view>
+            <text class="clear" wx:if="{{searchVal}}" bindtap="handleClear">×</text>
+        </view>
+    </view>
+    <!-- 搜索展示框 -->
+    <view class="searchShow" wx:if="{{searchVal}}">
+        <text class="item" wx:for="{{serachList}}" wx:for-item="item">{{item.name}}</text>
+    </view>
+    <!-- 种类展示列表 -->
+    <view class="breedShow">
+    </view>
+</view>

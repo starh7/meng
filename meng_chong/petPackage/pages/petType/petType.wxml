@@ -1,0 +1,26 @@
+<!-- petPackage/pages/petType/petType.wxml -->
+<view class="container">
+    <view class="select">
+        <view class="item" bind:tap="selecteType" data-type="猫猫">
+            <view class="type {{type=='猫猫'?'active':''}}">
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text>猫猫</text>
+        </view>
+        <view class="item" bind:tap="selecteType" data-type="狗狗">
+            <view class="type {{type=='狗狗'?'active':''}}">
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text>狗狗</text>
+        </view>
+        <view class="item" bind:tap="selecteType" data-type="其他">
+            <view class="type {{type=='其他'?'active':''}}">
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text>其他</text>
+        </view>
+    </view>
+    <button disabled="{{!type}}" class="{{type?'active':''}}" bind:tap="handleNext" data-pet="{{pet}}">
+        下一步
+    </button>
+</view>

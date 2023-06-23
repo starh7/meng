@@ -1,0 +1,9 @@
+<!--petPackage/pages/petBreed/petBreed.wxml-->
+<view class="container">
+    <view >
+        <input class="breed" placeholder="宠物品种" bind:input="handleInput"/>
+    </view>
+    <button disabled="{{!breed}}" class="{{breed?'active':''}}" bind:tap="handleNext" data-pet="{{pet}}">
+        下一步
+    </button>
+</view>

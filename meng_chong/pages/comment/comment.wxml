@@ -1,0 +1,74 @@
+<!-- pages/comment/comment.wxml -->
+<!-- 内容 -->
+<view class="detail">
+    <view class="publisher">
+        <view class="pub">
+            <image src="/static/images/index/mao.jpg" />
+            <view class="name">
+                <text>{{record.name}}</text>
+                <text>{{record.recordTime}}</text>
+            </view>
+        </view>
+        <text class="more" bindtap="showModal" data-id="{{record.id}}" >...</text>
+    </view>
+    <text>{{record.recordDescibe}}</text>
+    <view class="icon">
+        <view>
+            <text>某某</text>
+            <text>发布</text>
+        </view>
+        <view class="tubiao">
+            <view class="comment">
+                <text class="iconfont icon-pinglun1"></text>
+                <text>评论</text>
+            </view>
+            <view class="like">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>点赞</text>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- 点赞的人 -->
+<view class="con like_per">
+    <text class="iconfont icon-xihuancopy"></text>
+    <view class="touxiang">
+        <image src="/static/images/index/mao.jpg" />
+        <image src="/static/images/index/mao.jpg" />
+        <image src="/static/images/index/mao.jpg" />
+        
+    </view>
+</view>
+<!-- 评论的人 -->
+<view class="con commment_per">
+    <view class="item">
+        <view class="user">
+            <image src="/static/images/index/mao.jpg" />
+            <view >
+                <text >微信用户</text>
+                <text >11</text>
+            </view>
+        </view>
+        <text >02.28 19:35</text>
+    </view>
+    <view class="item">
+        <view class="user">
+            <image src="/static/images/index/mao.jpg" />
+            <view >
+                <text >微信用户</text>
+                <text >11</text>
+            </view>
+        </view>
+        <text >02.28 19:35</text>
+    </view>
+    <view class="item">
+        <view class="user">
+            <image src="/static/images/index/mao.jpg" />
+            <view >
+                <text >微信用户</text>
+                <text >11</text>
+            </view>
+        </view>
+        <text >02.28 19:35</text>
+    </view>
+</view>

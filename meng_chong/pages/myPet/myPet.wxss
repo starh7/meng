@@ -1,0 +1,73 @@
+/* pages/myPet/myPet.wxss */
+page{
+    background-color: #888;
+}
+.container{
+    margin: 20px 15px;
+}
+.container .item{
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.container .item .left{
+    display: flex;
+}
+.container .item .left image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.container .item .left .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.container .item .left .info text{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container .item .left .info text:nth-child(2){
+    color: #888;
+    font-size: 14px;
+    font-weight: normal;
+}
+.container .item .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container .item .right text{
+    color: #333;
+    font-weight: bold;
+}
+.container .item .right text:nth-child(2){
+    /* padding: 0 5px; */
+    /* text-align: center; */
+    /* line-height: 21px; */
+    /* margin: 0; */
+    /* background-color: #999; */
+    /* border-radius: 30%; */
+    font-size: 20px;
+}
+/* 添加按钮 */
+.container .add{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    /* margin-top: 50px; */
+}
+.container .add button{
+    width: 92%;
+    border-radius: 10px;
+    background-color: #fee258;
+    margin: 10px 20px;
+    margin-left: 0;
+    /* margin-right: 10px; */
+    padding-left: 0;
+}

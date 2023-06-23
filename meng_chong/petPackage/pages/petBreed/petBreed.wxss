@@ -1,0 +1,18 @@
+/* petPackage/pages/petBreed/petBreed.wxss */
+.container{
+    margin: 30px 15px;
+}
+.breed{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+button{
+    margin-top: 20px;
+    border-radius: 30%;
+}
+.active{
+    background-color: #fee258;
+}

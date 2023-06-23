@@ -1,0 +1,30 @@
+/* petPackage/pages/petBirth/petBirth.wxss */
+.container{
+  margin: 50px 15px
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  /* padding-left: 15px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px; */
+  align-items: center;
+  color: #888;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+button{
+  margin-top: 20px;
+  border-radius: 30%;
+}
+.active{
+  background-color: #fee258;
+}
+.jumpit{
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  color: #888;
+}

@@ -1,0 +1,75 @@
+<!-- pages/editor/editor.wxml -->
+<!-- 标签页 -->
+<view class="tab">
+    <view class="btns">
+        <view class="{{active==0?'active':''}}" data-active="0" bind:tap="handleChange">创建记录</view>
+        <view class="{{active==1?'active':''}}" data-active="1" bind:tap="handleChange">创建提醒</view>
+    </view>
+    <view class="cons">
+        <view class="{{active==0?'cur':'none'}} record">
+            <view class="big">
+                <view class="item" wx:for="{{big}}" wx:for-item="item" wx:key="id" bind:tap="goRecord" data-name="{{item.name}}">
+                    <text class="iconfont {{item.icon}}"></text>
+                    <text>{{item.name}}</text>
+                </view>
+            </view>
+            <view class="small">
+                <view class="item" wx:for="{{small}}" wx:for-item="smallIcon" wx:key="id" bind:tap="goRecord" data-name="{{smallIcon.name}}">
+                    <text class="iconfont {{smallIcon.icon}}"></text>
+                    <text>{{smallIcon.name}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="{{active==1?'cur':'none'}} record" >
+            <view class="small">
+                <view class="item" wx:for="{{remind}}" wx:for-item="smallIcon" wx:key="id" bind:tap="goRemind" data-name="{{smallIcon.name}}">
+                    <text class="iconfont {{smallIcon.icon}}"></text>
+                    <text>{{smallIcon.name}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<!-- <view class="tab">
+    <ul class="nav">
+        <li class="head_curr">创建记录</li>
+        <li>创建提醒</li>
+    </ul>
+    <ul class="content">
+        <li class="current">
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+            <view class="item">
+                <text class="iconfont icon-xihuancopy"></text>
+                <text>称体重</text>
+            </view>
+        </li>
+        <li>提醒</li>
+    </ul>
+</view> -->

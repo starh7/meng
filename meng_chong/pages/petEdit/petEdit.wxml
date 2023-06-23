@@ -1,0 +1,89 @@
+<!-- pages/petEdit/petEdit.wxml -->
+<!-- 头像 -->
+<view class="container">
+    <view class="head">
+        <image src="http://localhost:8080/images/pet/{{pet.photo}}" />
+    </view>
+    <!-- 宠物名字 -->
+    <view class="name">
+        <text>宠物名字</text>
+        <view>
+            <text>{{pet.name}}</text>
+            <text class="iconfont icon-dayuhao" bindtap="modalinput" data-target="#myName"></text>
+        </view>
+    </view>
+    <!-- 弹出框编辑模块 -->
+    <modal id="myName" hidden="{{hiddenmodalput}}" title="修改宠物姓名" confirm-text="确认" cancel-text="取消" bindcancel="modalinput" bindconfirm="confirm" >
+        <!-- 这里可以自由选择你的输入框类型 -->
+        <input bindinput="bindinput" type='text' value="{{pet.name}}" placeholder="请输入内容" auto-focus />
+        <!-- <textarea placeholder="请输入内容"></textarea> -->
+    </modal>
+    <!-- 宠物信息 -->
+    <view class="pet">
+        <view class="item">
+            <text>宠物品种</text>
+            <view>
+                <text>{{pet.breed}}</text>
+                <text class="iconfont icon-dayuhao" bind:tap="goBreed"></text>
+            </view>
+        </view>
+        <view class="item">
+            <text>宠物性别</text>
+            <view class="select">
+                <text class="{{pet.gendeer?'active': ''}}" bind:tap="changeSex" data-gendeer="1">男孩子</text>
+                <text class="{{pet.gendeer?'': 'active'}}" bind:tap="changeSex" data-gendeer="0">女孩子</text>
+            </view>
+        </view>
+        <view class="item">
+            <text>绝育状态</text>
+            <view class="select">
+                <text class="{{pet.sterilization?'': 'active'}}" bind:tap="changeSterilization" data-sterilization="0">未绝育</text>
+                <text class="{{pet.sterilization? 'active' :''}}"bind:tap="changeSterilization" data-sterilization="1">以绝育</text>
+            </view>
+        </view>
+        <view class="item">
+            <text>宠物体重</text>
+            <view>
+                <text>{{pet.weight}}kg</text>
+                <text class="iconfont icon-dayuhao" bindtap="modalinput111"></text>
+            </view>
+        </view>
+        <view class="item">
+            <text>出生日期</text>
+            <view class="myTime">
+                <text>{{datebirth}}</text>
+                <!-- <text class="iconfont icon-dayuhao"></text> -->
+                <picker mode="date" value="{{datebirth}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                    <text class="iconfont icon-dayuhao"></text>
+                </picker>
+            </view>
+        </view>
+        <!-- 日期选择器 -->
+        <!-- <view class="section">
+            <view class="section__title">日期选择器</view>
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                <view class="picker">当前选择: {{date}}</view>
+            </picker>
+        </view> -->
+        <view class="item">
+            <text>到家日期</text>
+            <view class="myTime">
+                <text>{{datearr}}</text>
+                <!-- <text class="iconfont icon-dayuhao"></text> -->
+                <picker mode="date" value="{{datearr}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange1">
+                    <text class="iconfont icon-dayuhao"></text>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <!-- 介绍 -->
+    <view class="introduce">
+        <text>一句话介绍</text>
+        <view>
+            <text>{{pet.introduce}}</text>
+            <text class="iconfont icon-dayuhao" bindtap="modalinputIntroduce"></text>
+        </view>
+    </view>
+    <!-- 提交数据按钮 -->
+    <button class="sendBtn" bind:tap="sendMsg">保存编辑</button>
+</view>

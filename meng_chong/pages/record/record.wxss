@@ -1,0 +1,98 @@
+/* pages/record/record.wxss */
+page{
+    font-size: 18px;
+    background-color: #f4f5ed;
+}
+.con{
+    margin: 0 20px;
+}
+/* 记录头 */
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.header .pet,.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.header .pet .iconfont,.time .iconfont{
+    margin-left: 10px;
+    color: #888;
+}
+.header .pet{
+    border-bottom: 1px solid #f4f5ed;
+}
+/* 记录体 */
+.body{
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.body text{
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+    /* margin: 15px; */
+}
+.body textarea{
+    font-size: 15px;
+    margin: 0 15px;
+    /* color: #ccc; */
+}
+.body .file{
+    display: flex;
+}
+.body .file text{
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+/* 底部自定义弹出窗 */
+
+.body-content{
+    display: flex;
+    padding: 10rpx;
+    height: 50rpx;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  
+.nodata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #bebbbb;
+    margin-top: 80rpx;
+  }
+
+  image{
+    width: 30rpx;
+    height:30rpx;
+  }
+  /* 保存按钮 */
+.save{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    /* margin-top: 50px; */
+}
+.save button{
+    width: 92%;
+    border-radius: 10px;
+    background-color: #fee258;
+    margin: 10px 20px;
+    /* margin-left: 0; */
+    /* margin-right: 10px; */
+    /* padding-left: 0; */
+}

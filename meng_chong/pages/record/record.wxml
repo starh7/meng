@@ -1,0 +1,54 @@
+<!-- pages/record/record.wxml -->
+<!-- 记录头 -->
+<view class="con header">
+    <view class="pet" bind:tap="onButtom">
+        <text>记录宠物</text>
+        <view class="right">
+            <text wx:if="{{petName.length>0}}" wx:for="{{petName}}" wx:for-item="item">{{item.name}},</text>
+            <text wx:if="{{!petName.length>0}}">{{pet[0].name}}</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </view>
+    </view>
+    <view class="time">
+        <text>记录时间</text>
+        <picker mode="date" value="{{dateNow}}" start="2015-09-01" end="{{dateNow}}" bindchange="bindDateChange">
+            <text>{{dateNow}}</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </picker>
+        <!-- <view class="right">
+            <text>2023-03-05 15:72</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </view> -->
+    </view>
+</view>
+<!-- 记录体 -->
+<view class="con body">
+    <text>描述</text>
+    <textarea placeholder="如果我很可爱，可以把握记下来" bindinput="describe"></textarea>
+    <view class="file">
+        <text class="iconfont icon-xihuancopy"></text>
+        <text class="iconfont icon-xihuancopy"></text>
+    </view>
+</view>
+<!-- 保存按钮 -->
+<view class="save">
+    <button bindtap="saveMsg">保存</button>
+</view>
+<!-- 底部自定义弹出窗 -->
+<bottomdialog id="bottomFrame" frameTitle="确定" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+    <scroll-view scroll-y="true" style="height: 400rpx;">
+        <block wx:if="{{pet.length > 0}}">
+            <block wx:for="{{pet}}">
+                <view class="body-content " id="bodyitem" bindtap="chooseItem" data-index="{{index}}">
+                    <view></view>
+                    <text>{{item.name}}</text>
+                    <image wx:if="{{item.isCheck}}" src="/static/images/index/check.jpg"></image>
+                    <image wx:else></image>
+                </view>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="nodata">暂无数据</view>
+        </block>
+    </scroll-view>
+</bottomdialog>

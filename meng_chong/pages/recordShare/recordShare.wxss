@@ -1,0 +1,74 @@
+/* pages/recordShare/recordShare.wxss */
+/* 下拉列表 */
+page{
+    background-color: #f4f5ed;
+    font-size: 18px;
+}
+.down{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    background-color: #fff;
+}
+.down .iconfont{
+    margin-left: 10px;
+}
+.container{
+    margin: 20px 15px ;
+}
+.year{
+    font-weight: bold;
+}
+.item{
+    display: flex;
+    margin-top: 20px;
+}
+.item .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 20%;
+    font-size: 15px;
+}
+.item .left .day{
+    display: flex;
+    align-items: center;
+}
+.item .left .day text:nth-child(1){
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin-right: 3px;
+    border-radius: 50%;
+    background-color: #d43939;
+    border: 1px solid #000;
+}
+.item .right{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.right .publisher{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .right .publisher image{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .right .icon{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .right .icon .comment text{
+    margin-right: 15px;
+  }
+  .right .icon .like text{
+    margin-right: 15px;
+  }

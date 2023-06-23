@@ -1,0 +1,12 @@
+<!--pages/knowledgeDetail/knowledgeDetail.wxml-->
+<view class="container">
+    <text class="title">{{contentList.name}}</text>
+    <view class="con-body" wx:for="{{contentList.knowledgeContentList[0].contentTextList}}" wx:key="id" wx:for-item="item" wx:for-index="index">
+        <image 
+        class="{{contentList.knowledgeContentList[0].contentImagesList[index].image ? '' : 'unshow'}}" 
+        src="http://localhost:8080/images/list/{{contentList.knowledgeContentList[0].contentImagesList[index].image}}" />
+        <text class="small">{{item.title}}</text>
+        <text class="content">{{item.text}}</text>
+    </view>
+
+</view>

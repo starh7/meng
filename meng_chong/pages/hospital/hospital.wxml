@@ -1,0 +1,83 @@
+<view class="container">
+    <!-- pages/hospital/hospital.wxml -->
+    <!-- 定位 -->
+    <view class="con location">
+        <text class="iconfont icon-dingwei"></text>
+        <text>点击获取当前定位</text>
+    </view>
+    <!-- 搜索 -->
+    <view class="con search" bindtap="goSearch">
+        <text class="iconfont icon-sousuo2"></text>
+        <input  placeholder="育苗" />
+    </view>
+    <!-- 宠医部分 -->
+   <!--  <view class="con pet_doctor">
+        <image src="/static/images/index/mao.jpg" />
+        <view class="center">
+            <text>职业兽医师</text>
+            <text>靠谱的兽医</text>
+        </view>
+        <view class="right">立即咨询</view>
+    </view> -->
+    <!-- 展示使用 -->
+    <view class="con user_help">
+        <view class="item">
+            <text class="iconfont icon-sousuo2"></text>
+            <view class="content">
+                <text>怎么吃</text>
+                <text>猫咪可以喝牛奶嘛</text>
+            </view>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-sousuo2"></text>
+            <view class="content">
+                <text>怎么吃</text>
+                <text>猫咪可以喝牛奶嘛</text>
+            </view>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-sousuo2"></text>
+            <view class="content">
+                <text>怎么吃</text>
+                <text>猫咪可以喝牛奶嘛零零零零</text>
+            </view>
+        </view>
+        <view class="item">
+            <text class="iconfont icon-sousuo2"></text>
+            <view class="content">
+                <text>怎么吃</text>
+                <text>猫咪可以喝牛奶嘛</text>
+            </view>
+        </view>
+        <!-- <image  src="/static/images/index/mao.jpg"/> -->
+    </view>
+    <!-- 养宠知识 -->
+    <view class="pet_konwledge">
+        <view class="con pet_header">
+            <text class="title">养宠知识</text>
+            <view class="classify">
+                <view class="{{tabIndex == 0? 'current':''}}" data-index="0" bind:tap="handleTab">
+                    <text>经验</text>
+                    <!-- <text class="iconfont icon-dayu"></text> -->
+                </view>
+                <view class="{{tabIndex==1? 'current':''}}" data-index="1" bindtap="handleTab">
+                    <text>种草</text>
+                    <!-- <text class="iconfont icon-dayu"></text> -->
+                </view>
+            </view>
+            <view class="enjoy" bindtap="test">
+                <text>铲屎官分享</text>
+            </view>
+        </view>
+        <view class="con pet_body">
+            <view class="item" wx:for="{{knowledgeList}}" wx:for-item="item" wx:key="id" wx:for-index="index" bindtap="goDetail" data-index="{{index}}">
+                <image class="big" src="http://localhost:8080/images/list/{{item.image}}" />
+                <text>{{item.name}}</text>
+                <view class="author">
+                    <image src="http://localhost:8080/images/list/{{item.image}}" />
+                    <text>{{item.author}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

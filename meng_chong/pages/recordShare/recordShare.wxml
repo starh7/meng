@@ -1,0 +1,38 @@
+<!-- pages/recordShare/recordShare.wxml -->
+<!-- 下拉列表 -->
+<view class="down">
+    <text>之之</text>
+    <text class="iconfont icon-jiedianguanli"></text>
+</view>
+<view class="container">
+    <text class="year">2023</text>
+    <!-- 小项 -->
+    <view class="item">
+        <view class="left">
+            <view class="day">
+                <text></text>
+                <text>03.10</text>
+            </view>
+            <text class="time">21:07</text>
+        </view>
+        
+        <view class="right">
+            <view class="publisher">
+                <image src="/static/images/index/mao.jpg" />
+                <text>吱吱</text>
+            </view>
+            <text>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</text>
+            <!-- <image src="/static/images/index/mao.jpg" /> -->
+            <view class="icon">
+                <view class="comment">
+                    <text class="iconfont icon-pinglun1"></text>
+                    <text>评论</text>
+                </view>
+                <view class="like">
+                    <text class="iconfont icon-xihuancopy"></text>
+                    <text>点赞</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

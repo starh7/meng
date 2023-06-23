@@ -1,0 +1,94 @@
+<!-- pages/remind/remind.wxml -->
+<!-- 记录头 -->
+<view class="con header">
+    <view class="pet" bind:tap="onButtom">
+        <text>记录宠物</text>
+        <view class="right">
+            <text wx:if="{{petName.length>0}}" wx:for="{{petName}}" wx:for-item="item">
+                {{item.name}},
+            </text>
+            <text wx:if="{{!petName.length>0}}">{{pet[0].name}}</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </view>
+    </view>
+    <!-- <view class="name">
+        <text>提醒名称</text>
+        <view class="right">
+            <input type="text" value="称体重"></input>
+            <text class="iconfont icon-dayuhao"></text>
+        </view>
+    </view> -->
+    <view class="type">
+        <text>提醒类型</text>
+        <text>{{name}}</text>
+    </view>
+</view>
+<!-- 提醒内容 -->
+<view class="con content">
+    <view class="date">
+        <text>计划时间</text>
+        <picker mode="date" value="{{dateNow}}" start="2015-09-01" end="{{dateNow}}" bindchange="bindDateChange">
+            <text>{{dateNow}}</text>
+            <text class="iconfont icon-dayuhao"></text>
+        </picker>
+    </view>
+    <view class="period">
+        <text>计划周次</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                {{array[index]}}
+                <text class="iconfont icon-dayuhao"></text>
+            </view>
+        </picker>
+        <!-- <text>单次计划</text> -->
+    </view>
+    <view class="time">
+        <text>记录宠物</text>
+        <view class="note">
+            <view class="setTime">
+                <!-- <text>当天</text> -->
+                <picker bindchange="bindPickerChangeDay" value="{{index1}}" range="{{region}}">
+                    <view class="picker">
+                        {{region[index1]}}
+                        <!-- <text class="iconfont icon-dayuhao"></text> -->
+                    </view>
+                </picker>
+                <!-- <text>19:00</text> -->
+                <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                    <view class="picker">{{time}}</view>
+                </picker>
+            </view>
+            <text class="wenben">我们会在{{format}}日{{time}}提醒你</text>
+        </view>
+    </view>
+</view>
+<!-- 温馨提示 -->
+<view class="con warm_tip">
+    <view>
+        <text class="dot"></text>
+        <text>温馨提示</text>
+    </view>
+    <view>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</view>
+</view>
+<!-- 保存按钮 -->
+<view class="save">
+    <button bindtap="saveMsg">保存</button>
+</view>
+<!-- 底部自定义弹出窗 -->
+<bottomdialog id="bottomFrame" frameTitle="确定" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+    <scroll-view scroll-y="true" style="height: 400rpx;">
+        <block wx:if="{{pet.length > 0}}">
+            <block wx:for="{{pet}}">
+                <view class="body-content " id="bodyitem" bindtap="chooseItem" data-index="{{index}}">
+                    <view></view>
+                    <text>{{item.name}}</text>
+                    <image wx:if="{{item.isCheck}}" src="/static/images/index/check.jpg"></image>
+                    <image wx:else></image>
+                </view>
+            </block>
+        </block>
+        <block wx:else>
+            <view class="nodata">暂无数据</view>
+        </block>
+    </scroll-view>
+</bottomdialog>

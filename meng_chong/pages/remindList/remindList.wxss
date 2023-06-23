@@ -1,0 +1,61 @@
+/* pages/remindList/remindList.wxss */
+page{
+  background-color: #f4f5ed;
+  font-size: 18px;
+}
+.container{
+  margin: 30px 15px;
+  margin-bottom: 10px;
+  
+  
+}
+.title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.item{
+  margin-top: 10px;
+  /* background-color: #a4c27d; */
+  background-color: #fff;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 1px;
+}
+.item .first{
+  display: flex;
+  justify-content: space-between
+}
+.item .first .iconfont{
+  margin-right: 30px;
+  font-size:30px;
+  background-color: #f4f5ed;
+  color: #888;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+.item .event{
+  /* margin: 20px 15px; */
+  /* margin-bottom: 10px */
+}
+.item .second{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px
+  
+}
+.item .second image{
+  width: 30px;
+  height: 30px;border-radius: 50%;
+  margin-right: 5px;
+}
+.item .second .petName{
+  font-weight: bold;
+}
+.item .date,.time{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #888;
+}

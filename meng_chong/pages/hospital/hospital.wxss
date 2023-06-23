@@ -1,0 +1,186 @@
+/* pages/hospital/hospital.wxss */
+/* 定位 */
+page{
+    background: -webkit-linear-gradient(top ,#5cd6de 0%,#f4f5ed 20%, #f4f5ed 100%);
+background-repeat: repeat-y;
+font-size: 18px;
+}
+.container{
+    background: -webkit-linear-gradient(top ,#5cd6de 0%,#f4f5ed 20%, #f4f5ed 100%);
+    background-repeat: no-repeat;
+}
+.con{
+    margin: 20px;
+}
+.location{
+display: flex;
+justify-items: center;
+}
+.location text:nth-child(1){
+    margin-right: 10px;
+    font-size: 30px;
+}
+.search{
+    /* height: 50px; */
+    padding: 5px 15px;
+    border-radius: 35px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.search .iconfont{
+    font-size: 25px;
+    /* margin: 0 20px; */
+    margin-right: 15px;
+    color: #cad2d0;
+}
+.pet_doctor{
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 10px;
+}
+.pet_doctor image{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.pet_doctor .center{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.pet_doctor .center text:nth-child(1){
+    font-weight: bold;
+    font-size: 25px;
+}
+.pet_doctor .center text:nth-child(2){
+    margin-top: 10px;
+    font-size: 18px;
+    height: 25px;
+    background-color: #ebfcfe;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+}
+.pet_doctor .right{
+    width: 100px;
+    height: 50px;
+    background-color: #1eca90;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+/* 展示使用 */
+.user_help{
+    display: flex;
+    flex-wrap: wrap;
+}
+.user_help .item{
+    width: 48%;
+    height: 80px;
+    background-color: #5f9443;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+.user_help .item:nth-child(odd){
+    margin-right: 10px;
+}
+.user_help .item .iconfont{
+    /* width: 50px;
+    height: 50px; */
+    font-size: 30px;
+    margin: 0 10px;
+}
+.user_help .item .content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    font-size: 14px;
+} 
+.user_help .item .content text:nth-child(2){
+    font-size: 12px;
+    margin-top: 10px;
+
+}
+/* 养宠知识 */
+.pet_konwledge{
+    /* background-color: #fff; */
+}
+.pet_header .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.pet_header .classify{
+    display: flex;
+    justify-content: space-around;
+    color: #9d9f91;
+    margin: 10px 0;
+
+}
+.pet_header .current{
+    color: #5cd6de;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #5cd6de;
+
+} 
+.pet_header .enjoy text{
+    font-size: 16px;
+    height: 20px;
+    background-color: #edfbfc;
+    color: #79d4da;
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 20px;
+    border-right: 5px;
+    
+}
+.pet_body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.pet_body .item{
+    width: 48%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 8px 6px 7px 1px #999;
+    /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+    margin-bottom: 15px;
+}
+.pet_body .item:nth-child(odd){
+    /* margin-right: 10px; */
+}
+.pet_body .item .big{
+    width: 100%;
+    height: 200px;
+    /* height: 80%; */
+    object-fit: cover;
+    
+}
+.pet_body .item text{
+    font-size: 14px;
+    display: block;
+    margin: 10px;
+}
+.pet_body .item .author image{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.pet_body .item .author{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin: 0 10px;
+    color: #666;
+}

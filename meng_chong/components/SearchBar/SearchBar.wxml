@@ -1,0 +1,12 @@
+<!-- components/SearchBar/SearchBar.wxml -->
+<!-- 搜索框 -->
+    <view class="con search_ipt">
+        <view class="ipt">
+            <view class="left">
+                <text class="iconfont icon-sousuo2"></text>
+                <input placeholder="驱虫" bindinput="handelSearch" value="{{searchVal}}"/>
+            </view>
+            <text class="clear" wx:if="{{searchVal}}" bindtap="handleClear">×</text>
+        </view>
+        <!-- <text class="search_btn" bindtap="goDetail">搜索</text> -->
+    </view>

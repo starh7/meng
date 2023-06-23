@@ -1,0 +1,12 @@
+<!--petPackage/pages/petName/petName.wxml-->
+<view class="container">
+    <!-- <image src="/static/images/index/mao.jpg" /> -->
+    <view class="photo" bind:tap="uploadPhotos">
+        <image wx:if="{{workImg.length==2}}" src="http://localhost:8080/images/pet/{{workImg[1].data.src}}" />
+        <image wx:else src="/static/images/index/mao.jpg" />
+        <!-- <text >{{workImg[1].data.src}}</text> -->
+
+    </view>
+    <input placeholder="请输入宠物名字" bind:input="handleInput"/>
+    <button disabled="{{!inputVal}}" class="{{inputVal?'active':''}}" bind:tap="handleNext" data-pet="{{pet}}">下一步</button>
+</view>

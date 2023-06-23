@@ -1,0 +1,112 @@
+/* pages/comment/comment.wxss */
+.con{
+    margin: 0 20px;
+}
+/* 内容 */
+ .detail{
+    margin-top: 20px;
+    /* height: 150px; */
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+  }
+   .detail .publisher{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .detail .publisher .pub{
+    display: flex;
+  }
+  .detail .publisher .name{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .detail .publisher .more{
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    width: 30px;
+    height: 24px; 
+    min-width: 30px;
+    min-height: 20px;
+    line-height: 7px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #9999;
+    color: #3d3a3a;
+
+
+  }
+  .detail .publisher .name text:nth-child(2){
+    margin-top: 10px;
+    font-size: 12px;
+  }
+   .detail .publisher image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+   .detail .icon{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+   .detail .icon  text{
+    margin-right: 15px;
+  }
+  .detail .icon view:nth-child(1) text:nth-child(1){
+    font-weight: bold;
+  }
+  .detail .icon .tubiao{
+    display: flex;
+
+  }
+  /* 点赞的人 */
+  .like_per{
+    display: flex;
+    margin-top: 20px;
+    height: 50px;
+    background-color: #d4cece;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+  .like_per .touxiang image{
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
+  /* 评论的人 */
+  .commment_per{
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .commment_per .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: .5px solid #b5b2b2;
+  }
+  .commment_per .item .user{
+    display: flex;
+    align-items: center;
+  }
+  .commment_per .item .user view{
+    display: flex;
+    flex-direction: column;
+  }
+  .commment_per .item .user view text:nth-child(1){
+    margin-bottom: 10px;
+  }
+  .commment_per .item .user image{
+    margin-right: 10px;
+    width: 40px;height: 40px;
+    border-radius: 50%;
+  }

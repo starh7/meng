@@ -1,0 +1,28 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="container">
+    <!-- 搜索框 -->
+    <view class="con search_ipt">
+        <view class="ipt">
+            <view class="left">
+                <text class="iconfont icon-sousuo2"></text>
+                <input placeholder="驱虫" bindinput="handelSearch" value="{{searchVal}}"/>
+            </view>
+            <text class="clear" wx:if="{{searchVal}}" bindtap="handleClear">×</text>
+        </view>
+        <text class="search_btn" bindtap="goDetail">搜索</text>
+    </view>
+   <!-- 搜索内容展示区域 -->
+    <view class="search_result">
+        <text class="title">其他人怎么说</text>
+        <view bindtap="goContentDetail" wx:for="{{searchList}}" wx:for-item="item" wx:key="id" class="con item" data-id="{{item.id}}">
+            <view>
+                <text class="cont">{{item.name}}</text>
+                <view class="pub">
+                    <image src="http://localhost:8080/images/list/{{item.image}}" />
+                    <text>{{item.author}}</text>
+                </view>
+            </view>
+            <image class="bigImg" src="http://localhost:8080/images/list/{{item.image}}" />
+        </view>
+    </view>
+</view>

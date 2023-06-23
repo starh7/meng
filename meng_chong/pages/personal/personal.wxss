@@ -1,0 +1,110 @@
+/* pages/personal/personal.wxss */
+/* 头像 */
+.container {
+    background: -webkit-linear-gradient(top, #fee258 0%, #f4f5ed 30%, #f4f5ed 100%);
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+.con {
+    margin: 0 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header image {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header .content {
+    display: flex;
+    flex-direction: column;
+}
+.header .content .name{
+    margin-bottom: 10px;
+}
+.header .content .name text:nth-child(2){
+    font-size: 16px;
+}
+.header .content .main {
+    display: block;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #ae8f4c;
+}
+
+.header .iconfont {
+    margin-left: 20px;
+}
+
+/* 标记 */
+.note {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.note .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note .item text:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 小导航 */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.nav .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 10px;
+}
+
+.nav .item .iconfont {
+    font-size: 36px;
+}
+
+/* 最新活动 */
+.newAction {
+    margin-top: 20px;
+}
+
+.newAction .title {
+    font-size: 20px;
+}
+
+.newAction .item {
+    height: 100px;
+    background-color: #fff;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+.newAction .item image {
+    height: 100px;
+    border-radius: 15px;
+}

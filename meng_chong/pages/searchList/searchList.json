@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchBar":"/components/SearchBar/SearchBar"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "搜索"
+}

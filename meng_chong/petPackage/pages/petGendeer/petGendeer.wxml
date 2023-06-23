@@ -1,0 +1,22 @@
+<!--petPackage/pages/petGendeer/petGendeer.wxml-->
+<view class="container">
+    <view class="select">
+        <view class="item" bind:tap="selecteGendeer" data-gendeer="1">
+            <view class="type {{type=='1'?'active':''}}">
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text>男孩子</text>
+        </view>
+        <view class="item" bind:tap="selecteGendeer" data-gendeer="0">
+            <view class="type {{type=='0'?'active':''}}">
+                <text class="iconfont icon-xihuancopy"></text>
+            </view>
+            <text>女孩子</text>
+        </view>
+    </view>
+    <button disabled="{{!gendeer}}" class="{{gendeer?'active':''}}" bind:tap="handleNext" data-pet="{{pet}}">
+        下一步
+    </button>
+
+    <text class="jumpit" bind:tap="jump">跳过 (暂不确定)</text>
+</view>

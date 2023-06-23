@@ -1,0 +1,182 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 标题 -->
+  <view class="title">
+    <text class="current">记录</text>
+    <text bind:tap="nessageTest">关注</text>
+  </view>
+  <!-- 使用者 -->
+  <view class="con userName" >
+    <text wx:if="{{pet.length>1}}" class="family {{current == 0?'current': ''}}" data-index="0">家庭</text>
+    <text  wx:for="{{pet}}" wx:for-item="item" wx:for-index="index" class="name {{current == index+1?'current': ''}}">{{item.name}}</text>
+    <text class="iconfont icon-jiahao" bind:tap="goMyPet"></text>
+  </view>
+  <!-- 宠物信息详情 -->
+  <!-- <view wx:if="{{pet.length==1}}" class="con userDetail" bindtap="toPetEdit">
+    <view  class="up">
+      <image src="{{pet[0].photo}}" />
+      <view class="info">
+        <text class="name">{{pet[0].name}}</text>
+        <view class="detail">
+          <text>{{pet[0].breed}}</text>
+          <text>{{age}}天</text>
+          <text>{{pet[0].weight}}kg</text>
+        </view>
+      </view>
+      <text class="iconfont icon-dayu"></text>
+    </view>
+    <view  class="down">{{pet[0].name}}已陪伴你{{accompanyTime}}天</view>
+  </view> -->
+  <!-- <scroll-view scroll-x="{{true}}" enable-flex class="petScroll" enhanced="{{true}}" 	paging-enabled="{{true}}">
+    有家庭时显示
+    <view wx:if="{{pet.length>1}}" class="families userDetail con">
+      <image wx:for="{{pet}}" wx:for-item="item" src="http://localhost:8080/images/pet/{{item.photo}}" />
+    </view>
+    <view wx:for="{{pet}}" wx:key="name" wx:for-item="item" class="con userDetail" bindtap="toPetEdit">
+      <view class="up">
+        <image src="http://localhost:8080/images/pet/{{item.photo}}" />
+        <view class="info">
+          <text class="name">{{item.name}}</text>
+          <view class="detail">
+            <text>{{item.breed}}</text>
+            <text>{{item.age}}天</text>
+            <text>{{item.weight}}kg</text>
+          </view>
+        </view>
+        <text class="iconfont icon-dayu"></text>
+      </view>
+      <view class="down">{{item.name}}已陪伴你{{item.accompanyTime}}天</view>
+    </view>
+  </scroll-view> -->
+
+<!-- 多宠物轮播图 -->
+  <swiper class="petScroll" style='height:{{swiperHeight}}' current="{{current}}" bindchange="handleSwiper">
+    <swiper-item >
+      <view wx:if="{{pet.length>1}}"  class="families userDetail con" mode="widthFix" >
+      <image wx:for="{{pet}}" wx:for-item="item" src="http://localhost:8080/images/pet/{{item.photo}}" />
+    </view>
+    </swiper-item>
+    <block wx:for="{{pet}}" wx:key="name" wx:for-item="item">
+      <swiper-item>
+        <view class="con userDetail" bindtap="toPetEdit" data-id="{{item.id}}">
+          <view class="up">
+            <image src="http://localhost:8080/images/pet/{{item.photo}}" />
+            <view class="info">
+              <text class="name">{{item.name}}</text>
+              <view class="detail">
+                <text>{{item.breed}}</text>
+                <text>{{item.age}}天</text>
+                <text>{{item.weight}}kg</text>
+              </view>
+            </view>
+            <text class="iconfont icon-dayu"></text>
+          </view>
+          <view class="down">{{item.name}}已陪伴你{{item.accompanyTime}}天</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 重要事项提醒 -->
+  <view class="con notion" wx:if="{{current == 0}}">
+    <image src="/static/images/index/mao.jpg" />
+    <view class="middle" wx:if="{{remindList.length==0}}">
+      <text>重要事件提醒</text>
+      <text>设置驱虫事件提醒</text>
+    </view>
+    <view class="middle" wx:else>{{remindList[0].remindType}}提醒</view>
+    <view class="right" bindtap="toEditor">去设置</view>
+  </view>
+
+  <view class="con notion"wx:else>
+  
+    <image src="/static/images/index/mao.jpg" />
+    <view class="middle" wx:if="{{toggleRemind.length==0}}">
+      <text>重要事件提醒</text>
+      <text>设置驱虫事件提醒</text>
+    </view>
+    <view class="middle" wx:else>{{toggleRemind[0].remindType}}提醒</view>
+    <view class="right" bindtap="toEditor">去设置</view>
+  </view>
+  
+  <!-- 事件记录展示 -->
+  <scroll-view scroll-y="{{true}}" class="showScroll" wx:if="{{current == 0}}">
+    <view wx:for="{{recordList}}" wx:for-item="item" class="con scrollItem" bind:tap="goRecordShow" data-record="{{item}}">
+      <text class="year">{{item.year[0]}}</text>
+      <view class="date">
+        <text class="day">{{item.year[2]}}</text>
+        <text>/{{item.year[1]}}月</text>
+        <view class="tip">
+          <text class="iconfont icon-jiedianguanli"></text>
+          <text>{{item.recordType}}</text>
+        </view>
+      </view>
+      <view class="detail">
+        <view class="publisher">
+          <image src="/static/images/index/mao.jpg" />
+          <text>{{item.name}}</text>
+          <!-- <text>之之</text> -->
+        </view>
+        <text>{{item.recordDescibe}}</text>
+        <view class="photo">
+          <image wx:for="{{item.recordPhotoList}}" wx:for-item="itemp" mode="widthFix"  class="size{{item.recordPhotoList.length}}" src="http://localhost:8080/images/record/{{itemp.image}}" />
+          <!-- <video src="http://localhost:8080/images/record/1.mp4" mode="widthFix" /> -->
+          <!-- <video src="http://localhost:8080/images/record/1.mp4" mode="widthFix" /> -->
+        </view>
+        <!-- <image src="/static/images/index/mao.jpg" /> -->
+        <!-- 品论点赞 -->
+        <view class="icon">
+          <view class="comment">
+            <text class="iconfont icon-pinglun1"></text>
+            <text>评论</text>
+          </view>
+          <view class="like">
+            <text class="iconfont icon-xihuancopy"></text>
+            <text>点赞</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <scroll-view scroll-y="{{true}}" class="showScroll" wx:else>
+    <!-- <text >11{{pet[].recordList.length}}</text> -->
+    <view wx:for="{{pet[index].recordList}}" wx:for-item="item" class="con scrollItem">
+      <text class="year">{{item.year[0]}}</text>
+      <view class="date">
+        <text class="day">{{item.year[2]}}</text>
+        <text>/{{item.year[1]}}月</text>
+        <view class="tip">
+          <text class="iconfont icon-jiedianguanli"></text>
+          <text>{{item.recordType}}</text>
+        </view>
+      </view>
+      <view class="detail">
+        <view class="publisher">
+          <image src="/static/images/index/mao.jpg" />
+          <text>{{item.name}}</text>
+          <!-- <text>之之</text> -->
+        </view>
+        <text>{{item.recordDescibe}}</text>
+        <view class="photo">
+          <image wx:for="{{item.recordPhotoList}}" wx:for-item="itemp" mode="widthFix" class="size{{item.recordPhotoList.length}}" src="http://localhost:8080/images/record/{{itemp.image}}" />
+        </view>
+        <!-- <image src="/static/images/index/mao.jpg" /> -->
+        <!-- 品论点赞 -->
+        <view class="icon">
+          <view class="comment">
+            <text class="iconfont icon-pinglun1"></text>
+            <text>评论</text>
+          </view>
+          <view class="like">
+            <text class="iconfont icon-xihuancopy"></text>
+            <text>点赞</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <!-- 编辑小加号 -->
+  <view class="editor" bindtap="toEditor">+</view>
+</view>

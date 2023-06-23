@@ -1,0 +1,136 @@
+/* pages/remind/remind.wxss */
+page{
+    font-size: 18px;
+    background-color: #f4f5ed;
+}
+.con{
+    margin: 0  20px;
+}
+/* 记录头 */
+.header,.content{
+    display: flex;
+    flex-direction: column;
+    /* height: 100px; */
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.header .pet,.name,.type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.header .pet,.name{
+    border-bottom: 1px solid #f4f5ed;
+}
+.header .name .right{
+    display: flex;
+    align-items: center;
+}
+.header .name .right input{
+    /* display: inline; */
+    min-width: 50px;
+    width: 60px;
+}
+.iconfont{
+    color: #888;
+    margin-left: 10px;
+}
+/* 提醒内容 */
+.content .date,.period,.time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+}
+.content .date,.period{
+    border-bottom: 1px solid #f4f5ed;
+}
+.content .time .note{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.content .time .note .setTime{
+    display: flex;
+}
+.content .time .note .setTime .picker{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+
+}
+.content .time .note .wenben{
+    font-size: 12px;
+    color: #cd6e6e;
+    margin: 15px 0;
+}
+/* 温馨提示 */
+.warm_tip{
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 15;
+    overflow: hidden;
+    
+}
+.warm_tip view{
+    margin: 15px;
+}
+.warm_tip .dot{
+    display: inline-block;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d38723;
+}
+.warm_tip view:nth-child(2){
+    font-size: 13px;
+}
+
+/* 底部自定义弹出窗 */
+
+.body-content{
+    display: flex;
+    padding: 10rpx;
+    height: 50rpx;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  
+.nodata{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #bebbbb;
+    margin-top: 80rpx;
+  }
+
+  image{
+    width: 30rpx;
+    height:30rpx;
+  }
+  /* 保存按钮 */
+.save{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    /* margin-top: 50px; */
+}
+.save button{
+    width: 92%;
+    border-radius: 10px;
+    background-color: #fee258;
+    margin: 10px 20px;
+    /* margin-left: 0; */
+    /* margin-right: 10px; */
+    /* padding-left: 0; */
+}

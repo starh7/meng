@@ -1,0 +1,34 @@
+/* petPackage/pages/petName/petName.wxss */
+.container{
+    margin: 0 15px;
+    /* text-align: center; */
+}
+image{
+    /* margin-top: 30px; */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
+.photo{
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fee258;
+    margin: 20px auto;
+}
+input{
+    margin-top: 20px;
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px;
+}
+button{
+    margin-top: 20px;
+    border-radius: 30%;
+}
+.active{
+    background-color: #fee258;
+}

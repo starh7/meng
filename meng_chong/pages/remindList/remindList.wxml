@@ -1,0 +1,19 @@
+<!--pages/remindList/remindList.wxml-->
+<view class="container">
+  <text class="title">计划提醒</text>
+  <scroll-view scroll-y="true">
+    <view class="item" wx:for="{{remindList}}" wx:key="id" wx:for-item="item">
+      <view class="first">
+        <text class="event">{{item.remindType}}</text>
+        <text class="iconfont icon-gengduo" bindtap="deletRemind" data-id="{{item.id}}"></text>
+      </view>
+      <view class="second">
+        <image src="/static/images/index/mao.jpg" />
+        <!-- <imges src="/static/images/index/mao.jpg"> -->
+        <text class="petName">{{item.name}}</text>
+      </view>
+      <text class="date">计划日期: {{item.planTime}}</text>
+      <text class="time">提醒时间: {{item.remindTime}}</text>
+    </view>
+  </scroll-view>
+</view>

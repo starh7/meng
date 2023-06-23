@@ -1,0 +1,277 @@
+<!-- pages/idinfo/idinfo.wxml -->
+<!-- 背景图片 -->
+<view>
+    <view class="indextop {{scrollTop > 10 ? 'navstyl':'unnavstyl'}}">
+        <view style="height:{{statusBarHeight}};"></view>
+        <view style="height:{{navheight}};padding:6px 0;display: flex;line-height: 32px;">
+            <view style="width:80rpx;opacity:1 ;margin-left:20px;">
+                <text class="iconfont icon-xiaoyuhao" bind:tap="returnIndex"></text>
+            </view>
+            <view class="xiangqi {{scrollTop > 10 ? 'xiangqi':'unxiangqi'}}">{{pet.name}}</view>
+            <view style="width:80rpx"></view>
+        </view>
+    </view>
+</view>
+<view class="backgroundImg">
+    <image class="bgc" src="/static/images/index/bg1.jpg" />
+    <!-- id信息 -->
+    <view class="idcard">
+        <view class="up">
+            <image src="http://localhost:8080/images/pet/{{pet.photo}}" />
+            <view class="right">
+                <text class="day">我们一起生活的{{pet.accompanyTime}}天</text>
+                <view class="name">
+                    <text>{{pet.name}}</text>
+                    <text class="iconfont icon-nan"></text>
+                </view>
+                <view class="icon">
+                    <text>{{pet.breed}}</text>
+                    <text>双鱼</text>
+                    <text class="iconfont icon-tianxie" bindtap="goEditorInfo" data-id="{{pet.id}}"></text>
+                </view>
+            </view>
+        </view>
+        <view class="detail">
+            <view class="day">
+                <text>{{pet.age}}天</text>
+                <text>在人类相当于宝宝</text>
+            </view>
+            <view class="birthday">
+                <view>
+                    <text>生日</text>
+                    {{pet["生日"]}}
+                </view>
+                <view>
+                    <text>到家日</text>
+                    {{pet["到家日"]}}
+                </view>
+            </view>
+            <text class="eye">在你眼里的样子</text>
+        </view>
+    </view>
+    <!-- 我的记录 -->
+    <view class="record">
+        <text class="title">我的记录</text>
+        <view class="petRecord">
+            <!-- <view class="allRecord">
+                <view class="all">
+                    <text>全部记录</text>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 四个小的 -->
+            <!-- <view class="four">
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 俩个的 -->
+            <!-- <view class="two">
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 俩个的 -->
+            <!-- <view class="two">
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 俩个的 -->
+            <!-- <view class="two">
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 俩个的 -->
+            <!-- <view class="two">
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>全部记录</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离一岁生日还有</text>
+                        <text>11天</text>
+                    </view>
+                </view>
+            </view> -->
+            <!-- 四个的 -->
+            <!-- <view class="four">
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>随手记</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view> -->
+        </view>
+        <!-- 网格布局 -->
+        <view class="petRecord">
+            <view class="first">
+                <view class="all">
+                    <text>全部记录</text>
+                </view>
+                <view class="big">
+                    <view class="head">
+                        <text>{{first[0].name}}</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离{{birth.age}}岁生日还有</text>
+                        <text>{{pet.birth?birth.day:"?"}}天</text>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="head">
+                        <text>{{first[1].name}}</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="second">
+                <view class="item" wx:for="{{second}}" wx:for-item="item">
+                    <view class="head">
+                        <text>{{item.name}}</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view>
+            <view class="third">
+                <view class="big" wx:for="{{third}}" wx:for-item="item">
+                    <view class="head">
+                        <text>{{item.name}}</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                    <view class="show">
+                        <text>距离上次{{item.name}}已过</text>
+                        <text>{{time[item.name]?time[item.name]:"?"}}天</text>
+                    </view>
+                </view>
+            </view>
+            <view class="second">
+                <view class="item" wx:for="{{fouth}}" wx:for-item="item">
+                    <view class="head">
+                        <text>{{item.name}}</text>
+                        <text class="iconfont icon-dayu"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
